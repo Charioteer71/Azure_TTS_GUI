@@ -82,23 +82,26 @@
 
 4.  **输入文本:**
     *   在 "输入文本" 区域键入或粘贴您想转换为语音的文本。
+  
+5.  **调整语速:**
+    *   在 "语速" 区域拖动滑块以调整语速。
 
-5.  **合成和播放:**
+6.  **合成和播放:**
     *   点击 **"▶️ 播放"** 按钮。
         *   如果当前文本和设置的音频尚未合成（或者如果参数已更改），它将首先合成音频（您会看到 "合成中..." 状态），然后播放它。
         *   如果缓存的音频可用且有效，它将立即播放。
     *   使用 **"⏸️ 暂停" / "▶️ 继续"** 和 **"⏹️ 停止"** 按钮进行播放控制。
     *   拖动进度条以在音频中定位。
 
-6.  **保存为 MP3:**
+7.  **保存为 MP3:**
     *   点击 **"保存为 MP3"** 按钮。
     *   将出现一个文件对话框，允许您选择 MP3 文件的位置和名称。
 
-7.  **语音配置文件:**
+8.  **语音配置文件:**
     *   **保存配置文件:** 配置好所需的语言、语音、角色和风格后，点击 **"保存当前为新配置"**。为配置文件输入一个名称。
     *   **加载配置文件:** 从 "选择配置" 下拉菜单中选择一个已保存的配置文件。应用程序将尝试应用这些设置。如果该区域的语音列表尚未加载，它会提示您先加载。
 
-8.  **正确关闭应用程序:**
+9.  **正确关闭应用程序:**
     *   为确保临时缓存文件能够被程序正确清理，请务必通过点击应用程序窗口右上角的 **"X" 关闭按钮** 来退出程序。
     *   **避免直接关闭运行此程序的命令提示符（CMD）窗口，** 因为那样会导致程序被强制终止，无法执行正常的清理步骤，可能会留下未删除的临时文件。（程序下次启动时会尝试清理一部分旧的残留文件，但最佳实践是正常关闭GUI窗口。）
 
@@ -196,22 +199,25 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
 4.  **Enter Text:**
     *   Type or paste the text you want to convert to speech into the "输入文本" (Input Text) area.
 
-5.  **Synthesize and Play:**
+5.  **Adjust Speech Rate:**
+    *   Drag the slider in the "语速" (Speech Rate) section to adjust the speech speed.
+
+6.  **Synthesize and Play:**
     *   Click the **"▶️ 播放" (Play)** button.
         *   If the audio for the current text and settings hasn't been synthesized yet (or if parameters changed), it will first synthesize the audio (you'll see a "合成中..." status) and then play it.
         *   If cached audio is available and valid, it will play immediately.
     *   Use the **"⏸️ 暂停" (Pause) / "▶️ 继续" (Resume)** and **"⏹️ 停止" (Stop)** buttons for playback control.
     *   Drag the progress bar to seek through the audio.
 
-6.  **Save as MP3:**
+7.  **Save as MP3:**
     *   Click the **"保存为 MP3" (Save as MP3)** button.
     *   A file dialog will appear, allowing you to choose the location and name for your MP3 file.
 
-7.  **Voice Profiles:**
+8.  **Voice Profiles:**
     *   **Save Profile:** After configuring your desired Language, Voice, Role, and Style, click **"保存当前为新配置" (Save Current as New Profile)**. Enter a name for the profile.
     *   **Load Profile:** Select a saved profile from the "选择配置" (Select Profile) dropdown. The application will attempt to apply the settings. If the voice list for the region hasn't been loaded, it will prompt you to load it first.
 
-8.  **Closing the Application Correctly:**
+9.  **Closing the Application Correctly:**
     *   To ensure that temporary cache files are properly cleaned up by the program, always exit the application by clicking the **"X" close button** on the application window's title bar.
     *   **Avoid directly closing the Command Prompt (CMD) window** that might be running this program. Doing so will forcibly terminate the application, preventing it from performing its normal cleanup procedures, which may leave temporary files undeleted. (The application will attempt to clean up some old orphaned files on its next startup, but the best practice is to close the GUI window normally.)
 ## Troubleshooting
