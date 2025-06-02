@@ -211,6 +211,9 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
     *   **Save Profile:** After configuring your desired Language, Voice, Role, and Style, click **"保存当前为新配置" (Save Current as New Profile)**. Enter a name for the profile.
     *   **Load Profile:** Select a saved profile from the "选择配置" (Select Profile) dropdown. The application will attempt to apply the settings. If the voice list for the region hasn't been loaded, it will prompt you to load it first.
 
+8.  **Closing the Application Correctly:**
+    *   To ensure that temporary cache files are properly cleaned up by the program, always exit the application by clicking the **"X" close button** on the application window's title bar.
+    *   **Avoid directly closing the Command Prompt (CMD) window** that might be running this program. Doing so will forcibly terminate the application, preventing it from performing its normal cleanup procedures, which may leave temporary files undeleted. (The application will attempt to clean up some old orphaned files on its next startup, but the best practice is to close the GUI window normally.)
 ## Troubleshooting
 
 *   **Pygame Initialization Error:** If you see a "Pygame 初始化失败" (Pygame Initialization Failed) error, playback functionality will be limited or unavailable. Ensure Pygame is correctly installed and your system has a working audio output.
