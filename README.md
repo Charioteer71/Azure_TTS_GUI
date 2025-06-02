@@ -1,4 +1,4 @@
-# Azure 文本转语音 GUI
+# Azure 文本转语音 GUI - 由Gemini 2.5 Pro (05-06) 生成
 
 ## 关于
 
@@ -108,7 +108,7 @@
 
 ---
 
-# Azure Text-to-Speech GUI
+# Azure Text-to-Speech GUI - Created by Gemini Pro 2.5 (05-06)
 
 ## About
 
