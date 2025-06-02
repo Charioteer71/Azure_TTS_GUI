@@ -1,113 +1,3 @@
-# Azure Text-to-Speech GUI (v4.8.3)
-
-## About
-
-A Python script with a GUI that utilizes your own Azure Speech Service API for Text-to-Speech (TTS) functionality. This application allows users to easily configure Azure credentials, select voices, roles, and styles, synthesize text to speech for playback, and save the audio as an MP3 file. It also features voice profile management and audio caching for improved performance.
-
-## Features
-
-*   **User-Friendly GUI:** Built with Tkinter for easy interaction.
-*   **Azure Speech Service Integration:** Leverages Azure for high-quality text-to-speech synthesis.
-*   **Voice Configuration:**
-    *   Load and refresh voice lists directly from Azure based on your service region.
-    *   Select language, specific voice, role-play character (if available), and speaking style (if available).
-*   **Voice Profiles:**
-    *   Save current voice, role, and style settings as named profiles.
-    *   Quickly load saved profiles.
-*   **Audio Playback:**
-    *   Integrated audio player (uses Pygame).
-    *   Controls: Play, Pause, Stop.
-    *   Progress bar with current time/total duration display.
-    *   Seek functionality by dragging the progress bar.
-*   **Audio Caching:**
-    *   Synthesized audio (WAV format) is temporarily cached.
-    *   If the text and voice parameters haven't changed, the cached audio is replayed, saving API calls and synthesis time.
-*   **Save as MP3:** Synthesize and save the speech output directly to an MP3 file.
-*   **Configuration Persistence:**
-    *   Azure subscription key and service region are saved locally in `azure_tts_settings.json`.
-    *   Voice profiles are also stored in this JSON file.
-*   **Status Updates:** Provides feedback on operations like loading voices, synthesizing, saving, and errors.
-
-## Prerequisites
-
-*   Python 3.x
-*   An active Microsoft Azure account.
-*   An Azure Speech Service resource created in your Azure portal. You will need its **Subscription Key** and **Service Region**.
-
-## Installation
-
-1.  **Clone the repository or download the script.**
-    ```bash
-    # If you have git installed
-    # git clone <repository_url>
-    # cd <repository_directory>
-    ```
-    Otherwise, just download the Python script file (`.py`).
-
-2.  **Install required Python libraries:**
-    Open your terminal or command prompt and run:
-    ```bash
-    pip install azure-cognitiveservices-speech
-    pip install pygame
-    ```
-    (Tkinter is usually included with standard Python installations.)
-
-## Configuration
-
-1.  **Run the script:**
-    ```bash
-    python your_script_name.py
-    ```
-    (Replace `your_script_name.py` with the actual name of the Python file, e.g., `azure_tts_app.py`).
-
-2.  **Enter Azure Credentials:**
-    *   In the "Azure 配置" (Azure Configuration) section:
-        *   **订阅密钥 (Subscription Key):** Enter the key from your Azure Speech Service resource.
-        *   **服务区域 (Service Region):** Enter the region for your Azure Speech Service resource (e.g., `eastus`, `westus2`, `northeurope`).
-    *   Click **"保存凭据" (Save Credentials)**. This will save your key and region to `azure_tts_settings.json` in the same directory as the script.
-
-3.  **Load Voices:**
-    *   Click **"加载/刷新语音列表" (Load/Refresh Voice List)**.
-    *   This will fetch available voices for the configured region. A success or error message will be displayed.
-
-## Usage
-
-1.  **Select Language:**
-    *   Once voices are loaded, choose a language from the "选择语言" (Select Language) dropdown. This will populate the "选择语音" (Select Voice) dropdown.
-
-2.  **Select Voice:**
-    *   Choose a specific voice from the "选择语音" (Select Voice) dropdown. This may populate the "角色风格" (Role) and "说话风格" (Style) dropdowns if the selected voice supports them.
-
-3.  **Select Role and Style (Optional):**
-    *   If available for the chosen voice, select a "角色风格" (Role) and/or "说话风格" (Style).
-
-4.  **Enter Text:**
-    *   Type or paste the text you want to convert to speech into the "输入文本" (Input Text) area.
-
-5.  **Synthesize and Play:**
-    *   Click the **"▶️ 播放" (Play)** button.
-        *   If the audio for the current text and settings hasn't been synthesized yet (or if parameters changed), it will first synthesize the audio (you'll see a "合成中..." status) and then play it.
-        *   If cached audio is available and valid, it will play immediately.
-    *   Use the **"⏸️ 暂停" (Pause) / "▶️ 继续" (Resume)** and **"⏹️ 停止" (Stop)** buttons for playback control.
-    *   Drag the progress bar to seek through the audio.
-
-6.  **Save as MP3:**
-    *   Click the **"保存为 MP3" (Save as MP3)** button.
-    *   A file dialog will appear, allowing you to choose the location and name for your MP3 file.
-
-7.  **Voice Profiles:**
-    *   **Save Profile:** After configuring your desired Language, Voice, Role, and Style, click **"保存当前为新配置" (Save Current as New Profile)**. Enter a name for the profile.
-    *   **Load Profile:** Select a saved profile from the "选择配置" (Select Profile) dropdown. The application will attempt to apply the settings. If the voice list for the region hasn't been loaded, it will prompt you to load it first.
-
-## Troubleshooting
-
-*   **Pygame Initialization Error:** If you see a "Pygame 初始化失败" (Pygame Initialization Failed) error, playback functionality will be limited or unavailable. Ensure Pygame is correctly installed and your system has a working audio output.
-*   **Azure Credentials Error:** Double-check your Subscription Key and Service Region. Ensure the Speech Service is active in your Azure portal.
-*   **Voice Loading Fails:** Verify your internet connection and that the Azure credentials are correct and have permissions for the Speech Service.
-*   **"PermissionError" during temp file cleanup:** This can sometimes happen on Windows if the audio file is still locked by Pygame. The script attempts retries, but if persistent, it might indicate a deeper issue with Pygame's resource release on your system.
-
----
-
 # Azure 文本转语音 GUI (v4.8.3)
 
 ## 关于
@@ -215,3 +105,113 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
 *   **Azure 凭据错误:** 请仔细检查您的订阅密钥和服务区域。确保语音服务在您的 Azure 门户中处于活动状态。
 *   **语音加载失败:** 请检查您的互联网连接以及 Azure 凭据是否正确并具有语音服务的权限。
 *   **临时文件清理过程中的 "PermissionError":** 在 Windows 上，如果音频文件仍被 Pygame 锁定，有时会发生这种情况。脚本会尝试重试，但如果问题持续存在，可能表明您的系统上 Pygame 资源释放存在更深层次的问题。
+
+---
+
+# Azure Text-to-Speech GUI (v4.8.3)
+
+## About
+
+A Python script with a GUI that utilizes your own Azure Speech Service API for Text-to-Speech (TTS) functionality. This application allows users to easily configure Azure credentials, select voices, roles, and styles, synthesize text to speech for playback, and save the audio as an MP3 file. It also features voice profile management and audio caching for improved performance.
+
+## Features
+
+*   **User-Friendly GUI:** Built with Tkinter for easy interaction.
+*   **Azure Speech Service Integration:** Leverages Azure for high-quality text-to-speech synthesis.
+*   **Voice Configuration:**
+    *   Load and refresh voice lists directly from Azure based on your service region.
+    *   Select language, specific voice, role-play character (if available), and speaking style (if available).
+*   **Voice Profiles:**
+    *   Save current voice, role, and style settings as named profiles.
+    *   Quickly load saved profiles.
+*   **Audio Playback:**
+    *   Integrated audio player (uses Pygame).
+    *   Controls: Play, Pause, Stop.
+    *   Progress bar with current time/total duration display.
+    *   Seek functionality by dragging the progress bar.
+*   **Audio Caching:**
+    *   Synthesized audio (WAV format) is temporarily cached.
+    *   If the text and voice parameters haven't changed, the cached audio is replayed, saving API calls and synthesis time.
+*   **Save as MP3:** Synthesize and save the speech output directly to an MP3 file.
+*   **Configuration Persistence:**
+    *   Azure subscription key and service region are saved locally in `azure_tts_settings.json`.
+    *   Voice profiles are also stored in this JSON file.
+*   **Status Updates:** Provides feedback on operations like loading voices, synthesizing, saving, and errors.
+
+## Prerequisites
+
+*   Python 3.x
+*   An active Microsoft Azure account.
+*   An Azure Speech Service resource created in your Azure portal. You will need its **Subscription Key** and **Service Region**.
+
+## Installation
+
+1.  **Clone the repository or download the script.**
+    ```bash
+    # If you have git installed
+    # git clone <repository_url>
+    # cd <repository_directory>
+    ```
+    Otherwise, just download the Python script file (`.py`).
+
+2.  **Install required Python libraries:**
+    Open your terminal or command prompt and run:
+    ```bash
+    pip install azure-cognitiveservices-speech
+    pip install pygame
+    ```
+    (Tkinter is usually included with standard Python installations.)
+
+## Configuration
+
+1.  **Run the script:**
+    ```bash
+    python your_script_name.py
+    ```
+    (Replace `your_script_name.py` with the actual name of the Python file, e.g., `azure_tts_app.py`).
+
+2.  **Enter Azure Credentials:**
+    *   In the "Azure 配置" (Azure Configuration) section:
+        *   **订阅密钥 (Subscription Key):** Enter the key from your Azure Speech Service resource.
+        *   **服务区域 (Service Region):** Enter the region for your Azure Speech Service resource (e.g., `eastus`, `westus2`, `northeurope`).
+    *   Click **"保存凭据" (Save Credentials)**. This will save your key and region to `azure_tts_settings.json` in the same directory as the script.
+
+3.  **Load Voices:**
+    *   Click **"加载/刷新语音列表" (Load/Refresh Voice List)**.
+    *   This will fetch available voices for the configured region. A success or error message will be displayed.
+
+## Usage
+
+1.  **Select Language:**
+    *   Once voices are loaded, choose a language from the "选择语言" (Select Language) dropdown. This will populate the "选择语音" (Select Voice) dropdown.
+
+2.  **Select Voice:**
+    *   Choose a specific voice from the "选择语音" (Select Voice) dropdown. This may populate the "角色风格" (Role) and "说话风格" (Style) dropdowns if the selected voice supports them.
+
+3.  **Select Role and Style (Optional):**
+    *   If available for the chosen voice, select a "角色风格" (Role) and/or "说话风格" (Style).
+
+4.  **Enter Text:**
+    *   Type or paste the text you want to convert to speech into the "输入文本" (Input Text) area.
+
+5.  **Synthesize and Play:**
+    *   Click the **"▶️ 播放" (Play)** button.
+        *   If the audio for the current text and settings hasn't been synthesized yet (or if parameters changed), it will first synthesize the audio (you'll see a "合成中..." status) and then play it.
+        *   If cached audio is available and valid, it will play immediately.
+    *   Use the **"⏸️ 暂停" (Pause) / "▶️ 继续" (Resume)** and **"⏹️ 停止" (Stop)** buttons for playback control.
+    *   Drag the progress bar to seek through the audio.
+
+6.  **Save as MP3:**
+    *   Click the **"保存为 MP3" (Save as MP3)** button.
+    *   A file dialog will appear, allowing you to choose the location and name for your MP3 file.
+
+7.  **Voice Profiles:**
+    *   **Save Profile:** After configuring your desired Language, Voice, Role, and Style, click **"保存当前为新配置" (Save Current as New Profile)**. Enter a name for the profile.
+    *   **Load Profile:** Select a saved profile from the "选择配置" (Select Profile) dropdown. The application will attempt to apply the settings. If the voice list for the region hasn't been loaded, it will prompt you to load it first.
+
+## Troubleshooting
+
+*   **Pygame Initialization Error:** If you see a "Pygame 初始化失败" (Pygame Initialization Failed) error, playback functionality will be limited or unavailable. Ensure Pygame is correctly installed and your system has a working audio output.
+*   **Azure Credentials Error:** Double-check your Subscription Key and Service Region. Ensure the Speech Service is active in your Azure portal.
+*   **Voice Loading Fails:** Verify your internet connection and that the Azure credentials are correct and have permissions for the Speech Service.
+*   **"PermissionError" during temp file cleanup:** This can sometimes happen on Windows if the audio file is still locked by Pygame. The script attempts retries, but if persistent, it might indicate a deeper issue with Pygame's resource release on your system.
