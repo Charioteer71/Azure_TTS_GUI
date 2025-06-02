@@ -1,4 +1,4 @@
-# Azure 文本转语音 GUI (v4.8.3)
+# Azure 文本转语音 GUI
 
 ## 关于
 
@@ -108,7 +108,7 @@
 
 ---
 
-# Azure Text-to-Speech GUI (v4.8.3)
+# Azure Text-to-Speech GUI
 
 ## About
 
