@@ -39,8 +39,8 @@
 1.  **克隆仓库或下载脚本。**
     ```bash
     # 如果您安装了 git
-    # git clone <repository_url>
-    # cd <repository_directory>
+    # git clone https://github.com/Charioteer71/Azure_TTS_GUI.git
+    # cd Azure_TTS_GUI
     ```
     或者，直接下载 Python 脚本文件 (`.py`)。
 
@@ -56,9 +56,8 @@
 
 1.  **运行脚本:**
     ```bash
-    python your_script_name.py
+    azure_tts_gui_x.x.x(versions).py
     ```
-    (将 `your_script_name.py` 替换为 Python 文件的实际名称，例如 `azure_tts_app.py`)。
 
 2.  **输入 Azure 凭据:**
     *   在 "Azure 配置" 部分：
@@ -149,8 +148,8 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
 1.  **Clone the repository or download the script.**
     ```bash
     # If you have git installed
-    # git clone <repository_url>
-    # cd <repository_directory>
+    # git clone https://github.com/Charioteer71/Azure_TTS_GUI.git
+    # cd Azure_TTS_GUI
     ```
     Otherwise, just download the Python script file (`.py`).
 
@@ -166,9 +165,8 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
 
 1.  **Run the script:**
     ```bash
-    python your_script_name.py
+    azure_tts_gui_x.x.x(versions).py
     ```
-    (Replace `your_script_name.py` with the actual name of the Python file, e.g., `azure_tts_app.py`).
 
 2.  **Enter Azure Credentials:**
     *   In the "Azure 配置" (Azure Configuration) section:
