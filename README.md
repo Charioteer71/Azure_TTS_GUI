@@ -179,7 +179,7 @@ A Python script with a GUI that utilizes your own Azure Speech Service API for T
     *   Click **"保存凭据" (Save Credentials)**. This will save your key and region to `azure_tts_settings.json` in the same directory as the script.
 
 3.  **Load Voices:**
-    *   Click **"加载/刷新语音列表" (Load/Refresh Voice List)**.
+    *   Click **"加载/刷新语音列表" (Load/Refresh Voice List)**. **(Click this button every time you run it.)**
     *   This will fetch available voices for the configured region. A success or error message will be displayed.
 
 ## Usage
